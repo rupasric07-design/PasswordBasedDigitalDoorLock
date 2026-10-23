@@ -1,0 +1,94 @@
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               XOR cells:        2
+ABC RESULTS:              XNOR cells:        2
+ABC RESULTS:                OR cells:        9
+ABC RESULTS:             ORNOT cells:        6
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:              NAND cells:        6
+ABC RESULTS:            ANDNOT cells:       22
+ABC RESULTS:               MUX cells:        2
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:        internal signals:       62
+ABC RESULTS:           input signals:       15
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+3.23. Executing OPT pass (performing simple optimizations).
+
+3.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module digitalclk.
+
+3.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\digitalclk'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+3.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \digitalclk..
+Removed 0 unused cells and 77 unused wires.
+<suppressed ~1 debug messages>
+
+3.23.5. Finished fast OPT passes.
+
+3.24. Executing HIERARCHY pass (managing design hierarchy).
+
+3.24.1. Analyzing design hierarchy..
+Top module:  \digitalclk
+
+3.24.2. Analyzing design hierarchy..
+Top module:  \digitalclk
+Removed 0 unused modules.
+
+3.25. Printing statistics.
+
+=== digitalclk ===
+
+   Number of wires:                 56
+   Number of wire bits:             71
+   Number of public wires:          12
+   Number of public wire bits:      24
+   Number of ports:                  7
+   Number of port bits:             10
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 64
+     $_ANDNOT_                      21
+     $_AND_                          2
+     $_DFFE_PP0P_                   13
+     $_DFF_PP0_                      1
+     $_MUX_                          2
+     $_NAND_                         5
+     $_NOT_                          2
+     $_ORNOT_                        6
+     $_OR_                           8
+     $_XNOR_                         2
+     $_XOR_                          2
+
+3.26. Executing CHECK pass (checking for obvious problems).
+Checking module digitalclk...
+Found and reported 0 problems.
+
+4. Executing Verilog backend.
+
+4.1. Executing BMUXMAP pass.
+
+4.2. Executing DEMUXMAP pass.
+Dumping module `\digitalclk'.
+
+5. Generating Graphviz representation of design.
+Writing dot description to `digitalclk_schematic.dot'.
+Dumping module digitalclk to page 1.
