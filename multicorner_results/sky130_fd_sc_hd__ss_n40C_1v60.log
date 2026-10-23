@@ -1,0 +1,21 @@
+OpenSTA 3.1.0 2996e37a3a Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+
+===== DESIGN CHECK =====
+
+===== WNS: WORST MAXIMUM SLACK =====
+worst slack max 6.50
+
+===== TNS: TOTAL NEGATIVE MAXIMUM SLACK =====
+tns max 0.00
+
+===== WORST MINIMUM SLACK =====
+worst slack min 0.41
+
+===== TNS: TOTAL NEGATIVE MINIMUM SLACK =====
+tns min 0.00
+% 

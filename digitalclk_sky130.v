@@ -54,7 +54,6 @@ module digitalclk(clk, rst, enter, password, unlock, locked, error);
   wire _050_;
   wire _051_;
   wire _052_;
-  wire _053_;
   wire [1:0] attempts;
   input clk;
   wire clk;
@@ -73,381 +72,376 @@ module digitalclk(clk, rst, enter, password, unlock, locked, error);
   output unlock;
   wire unlock;
   wire [3:0] unlock_timer;
-  sky130_fd_sc_hd__clkinv_1 _054_ (
+  sky130_fd_sc_hd__clkinv_1 _053_ (
     .A(unlock_timer[1]),
     .Y(_027_)
   );
-  sky130_fd_sc_hd__clkinv_1 _055_ (
+  sky130_fd_sc_hd__clkinv_1 _054_ (
     .A(rst),
     .Y(_000_)
   );
-  sky130_fd_sc_hd__clkinv_1 _056_ (
+  sky130_fd_sc_hd__clkinv_1 _055_ (
     .A(unlock),
     .Y(locked)
   );
-  sky130_fd_sc_hd__nor3b_1 _057_ (
-    .A(state[1]),
-    .B(state[0]),
-    .C_N(enter),
-    .Y(_028_)
-  );
-  sky130_fd_sc_hd__mux2_1 _058_ (
-    .A0(password_reg[3]),
-    .A1(password[3]),
-    .S(_028_),
-    .X(_026_)
-  );
-  sky130_fd_sc_hd__mux2_1 _059_ (
-    .A0(password_reg[2]),
-    .A1(password[2]),
-    .S(_028_),
-    .X(_025_)
-  );
-  sky130_fd_sc_hd__mux2_1 _060_ (
-    .A0(password_reg[1]),
-    .A1(password[1]),
-    .S(_028_),
-    .X(_024_)
-  );
-  sky130_fd_sc_hd__mux2_1 _061_ (
-    .A0(password_reg[0]),
-    .A1(password[0]),
-    .S(_028_),
-    .X(_023_)
-  );
-  sky130_fd_sc_hd__nand2b_1 _062_ (
-    .A_N(state[0]),
-    .B(state[1]),
-    .Y(_029_)
-  );
-  sky130_fd_sc_hd__nor2_1 _063_ (
-    .A(unlock_timer[2]),
-    .B(unlock_timer[1]),
-    .Y(_030_)
-  );
-  sky130_fd_sc_hd__a31o_1 _064_ (
-    .A1(unlock_timer[3]),
-    .A2(unlock_timer[0]),
-    .A3(_030_),
-    .B1(_029_),
-    .X(_031_)
-  );
-  sky130_fd_sc_hd__lpflow_isobufsrc_1 _065_ (
+  sky130_fd_sc_hd__lpflow_isobufsrc_1 _056_ (
     .A(state[0]),
     .SLEEP(state[1]),
-    .X(_032_)
+    .X(_028_)
   );
-  sky130_fd_sc_hd__nand2b_1 _066_ (
+  sky130_fd_sc_hd__nand2b_1 _057_ (
     .A_N(state[1]),
     .B(state[0]),
-    .Y(_033_)
+    .Y(_029_)
   );
-  sky130_fd_sc_hd__nand4b_1 _067_ (
+  sky130_fd_sc_hd__nand4b_1 _058_ (
     .A_N(password_reg[2]),
     .B(password_reg[1]),
     .C(password_reg[0]),
     .D(password_reg[3]),
-    .Y(_034_)
+    .Y(_030_)
   );
-  sky130_fd_sc_hd__lpflow_inputiso1p_1 _068_ (
-    .A(_033_),
-    .SLEEP(_034_),
-    .X(_035_)
+  sky130_fd_sc_hd__nor2_1 _059_ (
+    .A(_029_),
+    .B(_030_),
+    .Y(_031_)
   );
-  sky130_fd_sc_hd__nand2_1 _069_ (
+  sky130_fd_sc_hd__a21oi_1 _060_ (
+    .A1(attempts[0]),
+    .A2(_028_),
+    .B1(attempts[1]),
+    .Y(_032_)
+  );
+  sky130_fd_sc_hd__nor2_1 _061_ (
     .A(_031_),
-    .B(_035_),
-    .Y(_053_)
-  );
-  sky130_fd_sc_hd__nand2_1 _070_ (
-    .A(attempts[1]),
     .B(_032_),
-    .Y(_036_)
+    .Y(_026_)
   );
-  sky130_fd_sc_hd__nand2_1 _071_ (
+  sky130_fd_sc_hd__nand2_1 _062_ (
+    .A(attempts[0]),
+    .B(_029_),
+    .Y(_033_)
+  );
+  sky130_fd_sc_hd__lpflow_isobufsrc_1 _063_ (
+    .A(attempts[0]),
+    .SLEEP(attempts[1]),
+    .X(_034_)
+  );
+  sky130_fd_sc_hd__nand2_1 _064_ (
+    .A(_028_),
+    .B(_030_),
+    .Y(_035_)
+  );
+  sky130_fd_sc_hd__o21ai_0 _065_ (
+    .A1(_034_),
+    .A2(_035_),
+    .B1(_033_),
+    .Y(_025_)
+  );
+  sky130_fd_sc_hd__nor3b_1 _066_ (
     .A(state[1]),
     .B(state[0]),
+    .C_N(enter),
+    .Y(_036_)
+  );
+  sky130_fd_sc_hd__mux2_1 _067_ (
+    .A0(password_reg[3]),
+    .A1(password[3]),
+    .S(_036_),
+    .X(_024_)
+  );
+  sky130_fd_sc_hd__mux2_1 _068_ (
+    .A0(password_reg[2]),
+    .A1(password[2]),
+    .S(_036_),
+    .X(_023_)
+  );
+  sky130_fd_sc_hd__mux2_1 _069_ (
+    .A0(password_reg[1]),
+    .A1(password[1]),
+    .S(_036_),
+    .X(_022_)
+  );
+  sky130_fd_sc_hd__mux2_1 _070_ (
+    .A0(password_reg[0]),
+    .A1(password[0]),
+    .S(_036_),
+    .X(_021_)
+  );
+  sky130_fd_sc_hd__nand2b_1 _071_ (
+    .A_N(state[0]),
+    .B(state[1]),
     .Y(_037_)
   );
-  sky130_fd_sc_hd__o2111ai_1 _072_ (
-    .A1(rst),
-    .A2(_037_),
-    .B1(_036_),
-    .C1(_035_),
-    .D1(_031_),
-    .Y(_022_)
-  );
-  sky130_fd_sc_hd__nand3_1 _073_ (
-    .A(attempts[1]),
-    .B(_032_),
-    .C(_034_),
+  sky130_fd_sc_hd__nor2_1 _072_ (
+    .A(unlock_timer[2]),
+    .B(unlock_timer[1]),
     .Y(_038_)
   );
-  sky130_fd_sc_hd__a31oi_1 _074_ (
-    .A1(state[1]),
-    .A2(state[0]),
-    .A3(_000_),
-    .B1(_028_),
-    .Y(_039_)
+  sky130_fd_sc_hd__a31o_1 _073_ (
+    .A1(unlock_timer[3]),
+    .A2(unlock_timer[0]),
+    .A3(_038_),
+    .B1(_037_),
+    .X(_039_)
+  );
+  sky130_fd_sc_hd__o21ai_0 _074_ (
+    .A1(_029_),
+    .A2(_030_),
+    .B1(_039_),
+    .Y(_052_)
   );
   sky130_fd_sc_hd__nand2_1 _075_ (
-    .A(_038_),
-    .B(_039_),
-    .Y(_021_)
+    .A(attempts[1]),
+    .B(_028_),
+    .Y(_040_)
   );
   sky130_fd_sc_hd__nand3_1 _076_ (
     .A(state[1]),
     .B(state[0]),
-    .C(error),
-    .Y(_040_)
-  );
-  sky130_fd_sc_hd__nand2_1 _077_ (
-    .A(_032_),
-    .B(_034_),
+    .C(_000_),
     .Y(_041_)
   );
-  sky130_fd_sc_hd__nand2_1 _078_ (
-    .A(_040_),
-    .B(_041_),
+  sky130_fd_sc_hd__nand4b_1 _077_ (
+    .A_N(_031_),
+    .B(_039_),
+    .C(_040_),
+    .D(_041_),
     .Y(_020_)
   );
-  sky130_fd_sc_hd__nand3_1 _079_ (
+  sky130_fd_sc_hd__nand3_1 _078_ (
+    .A(attempts[1]),
+    .B(_028_),
+    .C(_030_),
+    .Y(_042_)
+  );
+  sky130_fd_sc_hd__nand3b_1 _079_ (
+    .A_N(_036_),
+    .B(_041_),
+    .C(_042_),
+    .Y(_019_)
+  );
+  sky130_fd_sc_hd__nand3_1 _080_ (
+    .A(state[1]),
+    .B(state[0]),
+    .C(error),
+    .Y(_043_)
+  );
+  sky130_fd_sc_hd__nand2_1 _081_ (
+    .A(_035_),
+    .B(_043_),
+    .Y(_018_)
+  );
+  sky130_fd_sc_hd__nand3_1 _082_ (
     .A(unlock_timer[2]),
     .B(unlock_timer[1]),
     .C(unlock_timer[0]),
-    .Y(_042_)
-  );
-  sky130_fd_sc_hd__nor2_1 _080_ (
-    .A(_029_),
-    .B(_042_),
-    .Y(_043_)
-  );
-  sky130_fd_sc_hd__o21ai_0 _081_ (
-    .A1(_033_),
-    .A2(_034_),
-    .B1(_029_),
     .Y(_044_)
   );
-  sky130_fd_sc_hd__and4_1 _082_ (
+  sky130_fd_sc_hd__nor2_1 _083_ (
+    .A(_037_),
+    .B(_044_),
+    .Y(_045_)
+  );
+  sky130_fd_sc_hd__o21ai_0 _084_ (
+    .A1(_029_),
+    .A2(_030_),
+    .B1(_037_),
+    .Y(_046_)
+  );
+  sky130_fd_sc_hd__and4_1 _085_ (
     .A(unlock_timer[3]),
     .B(unlock_timer[2]),
     .C(unlock_timer[1]),
     .D(unlock_timer[0]),
-    .X(_045_)
+    .X(_047_)
   );
-  sky130_fd_sc_hd__a311o_1 _083_ (
+  sky130_fd_sc_hd__a311o_1 _086_ (
     .A1(unlock_timer[3]),
     .A2(unlock_timer[0]),
-    .A3(_030_),
-    .B1(_045_),
-    .C1(_029_),
-    .X(_046_)
+    .A3(_038_),
+    .B1(_047_),
+    .C1(_037_),
+    .X(_048_)
   );
-  sky130_fd_sc_hd__a2bb2oi_1 _084_ (
+  sky130_fd_sc_hd__a2bb2oi_1 _087_ (
     .A1_N(unlock_timer[3]),
-    .A2_N(_043_),
-    .B1(_044_),
-    .B2(_046_),
-    .Y(_019_)
+    .A2_N(_045_),
+    .B1(_046_),
+    .B2(_048_),
+    .Y(_017_)
   );
-  sky130_fd_sc_hd__o21ai_0 _085_ (
-    .A1(_033_),
-    .A2(_034_),
+  sky130_fd_sc_hd__o21ai_0 _088_ (
+    .A1(_029_),
+    .A2(_030_),
     .B1(unlock_timer[2]),
-    .Y(_047_)
+    .Y(_049_)
   );
-  sky130_fd_sc_hd__a21oi_1 _086_ (
+  sky130_fd_sc_hd__a21oi_1 _089_ (
     .A1(unlock_timer[1]),
     .A2(unlock_timer[0]),
     .B1(unlock_timer[2]),
-    .Y(_048_)
-  );
-  sky130_fd_sc_hd__a211oi_1 _087_ (
-    .A1(_029_),
-    .A2(_047_),
-    .B1(_048_),
-    .C1(_043_),
-    .Y(_018_)
-  );
-  sky130_fd_sc_hd__xnor2_1 _088_ (
-    .A(unlock_timer[1]),
-    .B(unlock_timer[0]),
-    .Y(_049_)
-  );
-  sky130_fd_sc_hd__o22ai_1 _089_ (
-    .A1(_027_),
-    .A2(_044_),
-    .B1(_049_),
-    .B2(_031_),
-    .Y(_017_)
-  );
-  sky130_fd_sc_hd__mux2i_1 _090_ (
-    .A0(_029_),
-    .A1(_044_),
-    .S(unlock_timer[0]),
-    .Y(_016_)
-  );
-  sky130_fd_sc_hd__a21oi_1 _091_ (
-    .A1(attempts[0]),
-    .A2(_032_),
-    .B1(attempts[1]),
     .Y(_050_)
   );
-  sky130_fd_sc_hd__lpflow_isobufsrc_1 _092_ (
-    .A(_035_),
-    .SLEEP(_050_),
-    .X(_015_)
+  sky130_fd_sc_hd__a211oi_1 _090_ (
+    .A1(_037_),
+    .A2(_049_),
+    .B1(_050_),
+    .C1(_045_),
+    .Y(_016_)
   );
-  sky130_fd_sc_hd__nand2_1 _093_ (
-    .A(attempts[0]),
-    .B(_033_),
+  sky130_fd_sc_hd__xnor2_1 _091_ (
+    .A(unlock_timer[1]),
+    .B(unlock_timer[0]),
     .Y(_051_)
   );
-  sky130_fd_sc_hd__lpflow_isobufsrc_1 _094_ (
-    .A(attempts[0]),
-    .SLEEP(attempts[1]),
-    .X(_052_)
-  );
-  sky130_fd_sc_hd__o21ai_0 _095_ (
-    .A1(_041_),
-    .A2(_052_),
+  sky130_fd_sc_hd__o22ai_1 _092_ (
+    .A1(_027_),
+    .A2(_046_),
     .B1(_051_),
+    .B2(_039_),
+    .Y(_015_)
+  );
+  sky130_fd_sc_hd__mux2i_1 _093_ (
+    .A0(_037_),
+    .A1(_046_),
+    .S(unlock_timer[0]),
     .Y(_014_)
   );
-  sky130_fd_sc_hd__clkinv_1 _096_ (
+  sky130_fd_sc_hd__clkinv_1 _094_ (
     .A(rst),
     .Y(_001_)
   );
-  sky130_fd_sc_hd__clkinv_1 _097_ (
+  sky130_fd_sc_hd__clkinv_1 _095_ (
     .A(rst),
     .Y(_002_)
   );
-  sky130_fd_sc_hd__clkinv_1 _098_ (
+  sky130_fd_sc_hd__clkinv_1 _096_ (
     .A(rst),
     .Y(_003_)
   );
-  sky130_fd_sc_hd__clkinv_1 _099_ (
+  sky130_fd_sc_hd__clkinv_1 _097_ (
     .A(rst),
     .Y(_004_)
   );
-  sky130_fd_sc_hd__clkinv_1 _100_ (
+  sky130_fd_sc_hd__clkinv_1 _098_ (
     .A(rst),
     .Y(_005_)
   );
-  sky130_fd_sc_hd__clkinv_1 _101_ (
+  sky130_fd_sc_hd__clkinv_1 _099_ (
     .A(rst),
     .Y(_006_)
   );
-  sky130_fd_sc_hd__clkinv_1 _102_ (
+  sky130_fd_sc_hd__clkinv_1 _100_ (
     .A(rst),
     .Y(_007_)
   );
-  sky130_fd_sc_hd__clkinv_1 _103_ (
+  sky130_fd_sc_hd__clkinv_1 _101_ (
     .A(rst),
     .Y(_008_)
   );
-  sky130_fd_sc_hd__clkinv_1 _104_ (
+  sky130_fd_sc_hd__clkinv_1 _102_ (
     .A(rst),
     .Y(_009_)
   );
-  sky130_fd_sc_hd__clkinv_1 _105_ (
+  sky130_fd_sc_hd__clkinv_1 _103_ (
     .A(rst),
     .Y(_010_)
   );
-  sky130_fd_sc_hd__clkinv_1 _106_ (
+  sky130_fd_sc_hd__clkinv_1 _104_ (
     .A(rst),
     .Y(_011_)
   );
-  sky130_fd_sc_hd__clkinv_1 _107_ (
+  sky130_fd_sc_hd__clkinv_1 _105_ (
     .A(rst),
     .Y(_012_)
   );
-  sky130_fd_sc_hd__clkinv_1 _108_ (
+  sky130_fd_sc_hd__clkinv_1 _106_ (
     .A(rst),
     .Y(_013_)
   );
-  sky130_fd_sc_hd__dfrtp_1 _109_ (
+  sky130_fd_sc_hd__dfrtp_1 _107_ (
     .CLK(clk),
     .D(_014_),
-    .Q(attempts[0]),
+    .Q(unlock_timer[0]),
     .RESET_B(_000_)
+  );
+  sky130_fd_sc_hd__dfrtp_1 _108_ (
+    .CLK(clk),
+    .D(_015_),
+    .Q(unlock_timer[1]),
+    .RESET_B(_001_)
+  );
+  sky130_fd_sc_hd__dfrtp_1 _109_ (
+    .CLK(clk),
+    .D(_016_),
+    .Q(unlock_timer[2]),
+    .RESET_B(_002_)
   );
   sky130_fd_sc_hd__dfrtp_1 _110_ (
     .CLK(clk),
-    .D(_015_),
-    .Q(attempts[1]),
-    .RESET_B(_001_)
+    .D(_017_),
+    .Q(unlock_timer[3]),
+    .RESET_B(_003_)
   );
   sky130_fd_sc_hd__dfrtp_1 _111_ (
     .CLK(clk),
-    .D(_053_),
+    .D(_052_),
     .Q(unlock),
-    .RESET_B(_002_)
+    .RESET_B(_004_)
   );
   sky130_fd_sc_hd__dfrtp_1 _112_ (
     .CLK(clk),
-    .D(_016_),
-    .Q(unlock_timer[0]),
-    .RESET_B(_003_)
+    .D(_018_),
+    .Q(error),
+    .RESET_B(_005_)
   );
   sky130_fd_sc_hd__dfrtp_1 _113_ (
     .CLK(clk),
-    .D(_017_),
-    .Q(unlock_timer[1]),
-    .RESET_B(_004_)
+    .D(_019_),
+    .Q(state[0]),
+    .RESET_B(_006_)
   );
   sky130_fd_sc_hd__dfrtp_1 _114_ (
     .CLK(clk),
-    .D(_018_),
-    .Q(unlock_timer[2]),
-    .RESET_B(_005_)
+    .D(_020_),
+    .Q(state[1]),
+    .RESET_B(_007_)
   );
   sky130_fd_sc_hd__dfrtp_1 _115_ (
     .CLK(clk),
-    .D(_019_),
-    .Q(unlock_timer[3]),
-    .RESET_B(_006_)
+    .D(_021_),
+    .Q(password_reg[0]),
+    .RESET_B(_008_)
   );
   sky130_fd_sc_hd__dfrtp_1 _116_ (
     .CLK(clk),
-    .D(_020_),
-    .Q(error),
-    .RESET_B(_007_)
+    .D(_022_),
+    .Q(password_reg[1]),
+    .RESET_B(_009_)
   );
   sky130_fd_sc_hd__dfrtp_1 _117_ (
     .CLK(clk),
-    .D(_021_),
-    .Q(state[0]),
-    .RESET_B(_008_)
+    .D(_023_),
+    .Q(password_reg[2]),
+    .RESET_B(_010_)
   );
   sky130_fd_sc_hd__dfrtp_1 _118_ (
     .CLK(clk),
-    .D(_022_),
-    .Q(state[1]),
-    .RESET_B(_009_)
+    .D(_024_),
+    .Q(password_reg[3]),
+    .RESET_B(_011_)
   );
   sky130_fd_sc_hd__dfrtp_1 _119_ (
     .CLK(clk),
-    .D(_023_),
-    .Q(password_reg[0]),
-    .RESET_B(_010_)
+    .D(_025_),
+    .Q(attempts[0]),
+    .RESET_B(_012_)
   );
   sky130_fd_sc_hd__dfrtp_1 _120_ (
     .CLK(clk),
-    .D(_024_),
-    .Q(password_reg[1]),
-    .RESET_B(_011_)
-  );
-  sky130_fd_sc_hd__dfrtp_1 _121_ (
-    .CLK(clk),
-    .D(_025_),
-    .Q(password_reg[2]),
-    .RESET_B(_012_)
-  );
-  sky130_fd_sc_hd__dfrtp_1 _122_ (
-    .CLK(clk),
     .D(_026_),
-    .Q(password_reg[3]),
+    .Q(attempts[1]),
     .RESET_B(_013_)
   );
 endmodule
