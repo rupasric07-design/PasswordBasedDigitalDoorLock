@@ -75,19 +75,16 @@ This is the main Verilog RTL module responsible for the digital door-lock operat
 | `unlock` | Indicates the unlocked condition |
 | `locked` | Indicates the locked condition   |
 | `error`  | Indicates an incorrect password  |
+<img width="1920" height="1060" alt="digitalclk v" src="https://github.com/user-attachments/assets/e24f0d15-b3c0-420a-aaf9-60b97aa8fd99" />
 
 ### `digitalclk_tb.v`
 
 The testbench verifies the functionality of the RTL design by applying different input conditions.
 
 It includes test scenarios for reset, correct password entry, incorrect password entry, automatic relocking, and recovery after an error.
+<img width="1920" height="1060" alt="dclk_tb" src="https://github.com/user-attachments/assets/55985a2e-b88a-42ee-8da1-368cf37c2f94" />
 
 ---
-
-## 📷 RTL Schematic
-
-Upload your actual RTL schematic screenshot to the `images` folder.
-
 
 
 ## 🧪 Simulation
