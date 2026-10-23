@@ -1,0 +1,12 @@
+read_verilog digitalclk.v
+hierarchy -check -top digitalclk
+proc
+opt
+check
+synth -top digitalclk
+dfflibmap -liberty /home/vsduser/Desktop/OpenSTA/skywater-pdk-libs-sky130_fd_sc_hd/timing/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty /home/vsduser/Desktop/OpenSTA/skywater-pdk-libs-sky130_fd_sc_hd/timing/sky130_fd_sc_hd__tt_025C_1v80.lib
+clean
+check
+stat
+write_verilog -noattr digitalclk_sky130.v
