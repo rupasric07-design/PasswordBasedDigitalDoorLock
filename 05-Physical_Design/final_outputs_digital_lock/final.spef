@@ -1,0 +1,35 @@
+*SPEF "ieee 1481-1999"
+*DESIGN "digitalclk"
+*DATE "24 October 2026"
+*VENDOR "The OpenROAD Project"
+*PROGRAM "OpenROAD"
+*VERSION "v2.0-25794-g7cbd77e248"
+*DESIGN_FLOW "NAME_SCOPE LOCAL" "PIN_CAP NONE"
+*DIVIDER /
+*DELIMITER :
+*BUS_DELIMITER []
+*T_UNIT 1 NS
+*C_UNIT 1 PF
+*R_UNIT 1 OHM
+*L_UNIT 1 HENRY
+*NAME_MAP
+*1 _000_
+*2 _001_
+*3 _002_
+*4 _003_
+*5 _004_
+*6 _005_
+*7 _006_
+*8 _007_
+*9 _008_
+*10 _009_
+*11 _010_
+*12 _011_
+*13 _012_
+*14 _013_
+*15 _014_
+*16 _015_
+*17 _016_
+*18 _017_
+*19 _018_
+*20 _019_
