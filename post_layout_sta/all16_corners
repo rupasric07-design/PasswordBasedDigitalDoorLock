@@ -1,0 +1,202 @@
+Traffic Light Controller - 16-Corner Post-Route STA
+Clock period: 20 ns
+Netlist: 6_final.odb
+Parasitics: 6_final.spef
+
+------------------------------------------
+CORNER: ff_100C_1v65
+------------------------------------------
+Worst setup slack:
+worst slack max 15.27
+Worst hold slack:
+worst slack min 0.41
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: ff_100C_1v95
+------------------------------------------
+Worst setup slack:
+worst slack max 15.86
+Worst hold slack:
+worst slack min 0.33
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: ff_n40C_1v56
+------------------------------------------
+Worst setup slack:
+worst slack max 14.60
+Worst hold slack:
+worst slack min 0.48
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: ff_n40C_1v65
+------------------------------------------
+Worst setup slack:
+worst slack max 15.04
+Worst hold slack:
+worst slack min 0.43
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: ff_n40C_1v76
+------------------------------------------
+Worst setup slack:
+worst slack max 15.43
+Worst hold slack:
+worst slack min 0.38
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: ff_n40C_1v95
+------------------------------------------
+Worst setup slack:
+worst slack max 15.88
+Worst hold slack:
+worst slack min 0.32
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: ss_100C_1v40
+------------------------------------------
+Worst setup slack:
+worst slack max 8.79
+Worst hold slack:
+worst slack min 1.07
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: ss_100C_1v60
+------------------------------------------
+Worst setup slack:
+worst slack max 11.70
+Worst hold slack:
+worst slack min 0.99
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: ss_n40C_1v28
+------------------------------------------
+Worst setup slack:
+worst slack max -6.33
+Worst hold slack:
+worst slack min 1.43
+WNS:
+wns max -6.33
+TNS:
+tns max -52.66
+
+------------------------------------------
+CORNER: ss_n40C_1v35
+------------------------------------------
+Worst setup slack:
+worst slack max 1.47
+Worst hold slack:
+worst slack min 0.89
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: ss_n40C_1v40
+------------------------------------------
+Worst setup slack:
+worst slack max 4.68
+Worst hold slack:
+worst slack min 0.90
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: ss_n40C_1v44
+------------------------------------------
+Worst setup slack:
+worst slack max 6.43
+Worst hold slack:
+worst slack min 1.06
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: ss_n40C_1v60
+------------------------------------------
+Worst setup slack:
+worst slack max 10.79
+Worst hold slack:
+worst slack min 0.99
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: ss_n40C_1v76
+------------------------------------------
+Worst setup slack:
+worst slack max 12.78
+Worst hold slack:
+worst slack min 0.77
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: tt_025C_1v80
+------------------------------------------
+Worst setup slack:
+worst slack max 14.64
+Worst hold slack:
+worst slack min 0.50
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+------------------------------------------
+CORNER: tt_100C_1v80
+------------------------------------------
+Worst setup slack:
+worst slack max 14.66
+Worst hold slack:
+worst slack min 0.50
+WNS:
+wns max 0.00
+TNS:
+tns max 0.00
+
+
+========== FINAL RUN STATUS ==========
+Requested corners: 16
+Failed corners: 0
+All 16 corner runs completed successfully.
