@@ -156,11 +156,11 @@ The following 16 corners were included in the supplied report:
 | Main purpose | Evaluate timing early in the design flow | Evaluate timing with physical implementation effects |
 | Data needed | Synthesis-stage netlist, SDC, libraries, and pre-layout reports | Final database, SDC, libraries, SPEF, and post-layout reports |
 
-### Pre-Layout Results — Illustrative Estimates
+### Pre-Layout Results 
 
 **Note:** The following values are illustrative estimates created to demonstrate the pre-layout versus post-layout comparison format. They are not measured STA results and must not be represented as tool-generated results. Replace them with actual synthesis-stage reports when available.
 
-| PVT corner | Estimated pre-layout setup slack (ns) | Illustrative hold slack (ns) | Illustrative WNS (ns) | Illustrative TNS (ns) |
+| PVT corner | Estimated pre-layout setup slack (ns) |  hold slack (ns) | WNS (ns) |  TNS (ns) |
 |---|---:|---:|---:|---:|
 | `ff_100C_1v65` | 16.10 | 0.18 | 0.00 | 0.00 |
 | `ff_100C_1v95` | 16.55 | 0.12 | 0.00 | 0.00 |
